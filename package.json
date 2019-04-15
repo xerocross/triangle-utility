@@ -1,0 +1,38 @@
+{
+  "name": "triangle-utility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "triangle.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.18",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "typescript": "^3.2.4",
+    "we-assert": "^2.2.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
