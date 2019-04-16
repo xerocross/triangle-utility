@@ -1,15 +1,5 @@
+import NumberTriangle from "./number-triangle";
 declare const _default: {
-    TriangleNumbers: {
-        generateTriangleNumbersUpTo(max: number): number[];
-        getTriangleNumberByIndex(index: number): number;
-        getIndexByTriangleNumber(triangleNum: number): number;
-    };
-    Naturals: {
-        getDivisors(num: number): number[];
-        getProperDivisors(num: number): number[];
-        sumProperDivisors(num: number): number;
-        isAmicablePair(a: number, b: number): boolean;
-        findAmicableNumbersUnder(max: number): number[];
-    };
+    NumberTriangle: typeof NumberTriangle;
 };
 export default _default;
