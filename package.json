@@ -9,6 +9,10 @@
   "keywords": [],
   "author": "Adam Cross",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xerocross/xero.number-utility.git"
+  },
   "dependencies": {
     "we-assert": "^2.2.0"
   },
