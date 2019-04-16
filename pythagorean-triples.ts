@@ -1,3 +1,6 @@
+//@ts-ignore
+import WeAssert from "we-assert";
+let we = WeAssert.build();
 export default {
     getSquaresUpTo(max : number) :number[] {
         let squares : number[] = [];
@@ -14,5 +17,13 @@ export default {
         let sortedNumbers = [a, b, c];
         sortedNumbers.sort((x,y)=>x-y);
         return sortedNumbers[0]**2 + sortedNumbers[1]**2 === sortedNumbers[2]**2
+    },
+    findPythagoreanTriple(int: number) {
+        we.assert.that(int >= 3, "int >= 3");
+        for (let i = 1; i < int - 1; i++) {
+            let remainder = int - i;
+
+
+        }
     }
 }
