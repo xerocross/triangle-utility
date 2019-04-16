@@ -1,50 +1,23 @@
-import TriangleNumbers from "./triangle-numbers.js";
-
-describe("General:",function() {
-    test("we can generate a simple list of triangle numbers", function() {
-        // for (let i = 1; i < 50; i++) {
-        //     console.log(i + " : " + x.generateTriangleNumbersUpTo(i));
-        // }
-        expect(TriangleNumbers.generateTriangleNumbersUpTo(21).pop()).toBe(21);
-    });
-
-    test("we can get triangle numbers by index", function() {
-        // for (let i = 0; i < 10; i++) {
-        //     console.log(i + " : " + TriangleNumbers.getTriangleNumberByIndex(i));
-        // }
-        // 7 -> 36
-        expect(TriangleNumbers.getTriangleNumberByIndex(7)).toBe(36);
-    });
-
-    test("getChildrenByIndex", function() {
-        let testIndex = 3;
-        expect(TriangleNumbers.getChildrenByIndex(testIndex).leftChildIndex).toBe(6);
-    });
-
-    test("getIndexByTriangleNumber", function() {
-        let testNum = 15;
-        let index = TriangleNumbers.getIndexByTriangleNumber(testNum);
-        expect(index).toBe(4);
-    });
-    test("getRowIndexByIndex", function() {
-        expect(TriangleNumbers.getRowIndexByIndex(0)).toBe(0);
-        expect(TriangleNumbers.getRowIndexByIndex(1)).toBe(1);
-        expect(TriangleNumbers.getRowIndexByIndex(2)).toBe(1);
-        expect(TriangleNumbers.getRowIndexByIndex(3)).toBe(2);
-
-        expect(TriangleNumbers.getRowIndexByIndex(9)).toBe(3);
-        expect(TriangleNumbers.getRowIndexByIndex(8)).toBe(3);
-        expect(TriangleNumbers.getRowIndexByIndex(7)).toBe(3);
-        expect(TriangleNumbers.getRowIndexByIndex(6)).toBe(3);
-        expect(TriangleNumbers.getRowIndexByIndex(10)).toBe(4);
-        expect(TriangleNumbers.getRowIndexByIndex(5)).toBe(2);
-        expect(TriangleNumbers.getRowIndexByIndex(0)).toBe(0);
-    });
-
-    //getArrayIndexByRowAndHorizontal
-    test("getArrayIndexByRowAndHorizontal", function() {
-        console.log("get index x,y: " + TriangleNumbers.getArrayIndexByRowAndHorizontal(0, 0));
-        console.log("get index x,y: " + TriangleNumbers.getArrayIndexByRowAndHorizontal(1, 0));
-        console.log("get index x,y: " + TriangleNumbers.getArrayIndexByRowAndHorizontal(2, 0));
-    });
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const triangle_numbers_1 = __importDefault(require("./triangle-numbers"));
+test("generate triangle numbers", function () {
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(1).pop()).toBe(1);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(2).pop()).toBe(1);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(3).pop()).toBe(3);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(6).pop()).toBe(6);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(7).pop()).toBe(6);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(8).pop()).toBe(6);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(9).pop()).toBe(6);
+    expect(triangle_numbers_1.default.generateTriangleNumbersUpTo(10).pop()).toBe(10);
+});
+test("getTriangleNumberByIndex", function () {
+    expect(triangle_numbers_1.default.getTriangleNumberByIndex(0)).toBe(1);
+    expect(triangle_numbers_1.default.getTriangleNumberByIndex(1)).toBe(3);
+    expect(triangle_numbers_1.default.getTriangleNumberByIndex(2)).toBe(6);
+    expect(triangle_numbers_1.default.getTriangleNumberByIndex(3)).toBe(10);
+    expect(triangle_numbers_1.default.getTriangleNumberByIndex(4)).toBe(15);
 });

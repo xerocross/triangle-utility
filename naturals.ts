@@ -20,15 +20,7 @@ const Naturals = {
         return divisors;
     },
     sumProperDivisors (num: number) {
-        let divisors;
-        try {
-            divisors = this.getDivisors(num);
-        } catch(e) {
-            console.log("what is this?")
-            console.log(this);
-            console.log(e);
-            throw "^^^^^^^^^^^^^^^^^^^^";
-        }
+        let divisors = this.getDivisors(num);
         let properDivisors = divisors;
         properDivisors.pop(); // remove num from list
         let sum = 0;

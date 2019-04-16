@@ -1,10 +1,26 @@
 declare class NumberTriangle {
-    private numberArray;
+    static getTriangleWidthByRow(rowIndex: number): number;
+    static rowByVertToIndex(row: number, vert: number): number;
+    static getChildrenIndexes(row: number, vert: number): {
+        left: {
+            row: number;
+            vert: number;
+        };
+        right: {
+            row: number;
+            vert: number;
+        };
+    };
+    static getRowByIndex(arrayIndex: number): number;
+    protected numberArray: number[];
     private __numRows;
     constructor(numberArrayIn: number[]);
     toString(): string;
-    get(rowIndex: number, horizontalIndex: number): number | undefined;
+    readonly size: number;
+    equals(other: NumberTriangle): boolean;
+    get(rowIndex: number, vertIndex: number): number;
     readonly numRows: number;
-    sumTriangleUpOneLevel(): NumberTriangle | null;
+    maxSumFromChildUp(row: number, vert: number): number;
+    maxSumFromBottomRowUp(): NumberTriangle;
 }
 export default NumberTriangle;

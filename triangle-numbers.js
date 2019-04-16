@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var TriangleNumbers = {
+const TriangleNumbers = {
+    // get a list of sorted triangle numbers up to and
+    // including max
     generateTriangleNumbersUpTo(max) {
-        let triangleNumbers = [];
+        const triangleNumbers = [];
         let triangleNum = 0;
         let index = 1;
         while (triangleNum <= max) {
@@ -15,6 +17,8 @@ var TriangleNumbers = {
         }
         return triangleNumbers;
     },
+    // by fiat, 1 is the first triangle number
+    // at index 0
     getTriangleNumberByIndex(index) {
         let triangleNum = 1;
         for (let i = 1; i <= index; i++) {
@@ -22,40 +26,17 @@ var TriangleNumbers = {
         }
         return triangleNum;
     },
-    getTriangleWidthByRow(rowIndex) {
-        return rowIndex + 1;
-    },
-    getArrayIndexByRowAndHorizontal(rowIndex, horizontal) {
-        if (rowIndex == 0) {
-            return 0;
-        }
-        let triangleNumber = this.getTriangleNumberByIndex(rowIndex - 1);
-        return triangleNumber + horizontal;
-    },
-    getChildrenByIndex(index) {
-        console.log("getChildrenByIndex");
-        let rowIndex = this.getRowIndexByIndex(index);
-        let shift = rowIndex + 1;
-        return {
-            leftChildIndex: index + shift,
-            rightChildIndex: index + shift + 1
-        };
-    },
-    getParentByChildIndex(index) {
-        let triangleNum = this.generateTriangleNumbersUpTo(index);
-    },
-    getRowIndexByIndex(arrayIndex) {
-        let count = 1;
-        let testNum = arrayIndex;
-        while (testNum >= 0) {
-            testNum = testNum - count;
-            count++;
-        }
-        let rowIndex = count - 2;
-        // we incremented count exactly 1 too many times
-        // then we translate a count into an index
-        return rowIndex;
-    },
+    // getTriangleWidthByRow (rowIndex: number): number {
+    //     return rowIndex + 1;
+    // },
+    // getChildrenByIndex (index: number) {
+    //     const rowIndex = this.getRowIndexByIndex(index);
+    //     const shift = rowIndex + 1;
+    //     return {
+    //         leftChildIndex : index + shift,
+    //         rightChildIndex : index + shift + 1
+    //     };
+    // },
     getIndexByTriangleNumber(triangleNum) {
         let index = 0;
         let testNum = triangleNum;

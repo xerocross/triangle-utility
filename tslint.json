@@ -3,6 +3,7 @@
     "extends": [
         "tslint:recommended"
     ],
+    "plugins": ["jest"],
     "jsRules": {
 
     },
@@ -11,15 +12,23 @@
         "interface-name" : false,
         "variable-name" : false,
         "prefer-for-of" : false,
+        "max-line-length" : false,
+        "no-trailing-whitespace" : false,
+        "ordered-imports" : false,
         "comma-spacing": [true, { "before": false, "after": true }],
         "brace-style": true,
+        "object-literal-shorthand" : false,
+        "no-unused-expression": false,
         "space-before-blocks" : true,
         "comma-dangle": [true, "never"],
         "array-bracket-spacing": [true, "never", {}],
         "space-infix-ops": [true, {"int32Hint": false}],
         "no-console": false,
         "no-underscore-dangle" : false,
+        "object-literal-sort-keys" : false,
+        "trailing-comma" : false,
         "indent": [true, "spaces", 4],
+        "only-arrow-functions": false,
         "key-spacing": [true, {
             "beforeColon": true,
             "afterColon": true,
